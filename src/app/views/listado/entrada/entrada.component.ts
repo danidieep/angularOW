@@ -9,9 +9,9 @@ import { Entrada } from 'src/app/share/interfaces/interfaces';
 export class EntradaComponent implements OnInit{
 
   @Input()
-  public entrada: Entrada
+  public entrada: any
   @Output()
-  public doEvent: EventEmitter<string> = new EventEmitter<string>()
+  public doEvent: EventEmitter<number> = new EventEmitter<number>()
 
 
   constructor(){
@@ -28,7 +28,7 @@ export class EntradaComponent implements OnInit{
   }
 
   public lanzarTitulo():void{
-    this.doEvent.emit(this.entrada.title)
+    this.doEvent.emit(this.entrada.id)
   }
 
   public modificarClase(): any {

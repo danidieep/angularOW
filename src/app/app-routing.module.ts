@@ -5,15 +5,22 @@ import { ListadoComponent } from "./views/listado/listado.component";
 import { NotFoundPageComponent } from "./views/not-found-page/not-found-page.component";
 import { AboutUsComponent } from "./views/about-us/about-us.component";
 import { LoginComponent } from './views/login/login.component';
+import { FrontComponent } from './views/front/front.component';
+import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
 
 const routes : Routes = [
-  {path: 'login', component:LoginComponent},
-  {path: 'listado', component: ListadoComponent},
-  {path: 'aboutus', component: AboutUsComponent},
+  { path: 'front', component: FrontComponent, children: [
+    { path: 'listado', component: ListadoComponent },
+    { path: 'aboutus', component: AboutUsComponent},
+    { path: 'detalle-entrada/:id', component: DetallesEntradaComponent},
 
-  {path:'', redirectTo: '/listado', pathMatch: 'full'},
-  {path: '**', component: NotFoundPageComponent}
+    {path: '', redirectTo: 'listado', pathMatch: 'full'}
+  ]},
 
+  { path: 'login', component: LoginComponent},
+
+  { path: '', redirectTo: 'front/listado', pathMatch: 'full'},
+  { path: '**', component: NotFoundPageComponent}
 ]
 
 

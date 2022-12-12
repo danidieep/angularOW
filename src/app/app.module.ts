@@ -12,6 +12,8 @@ import { NotFoundPageComponent } from './views/not-found-page/not-found-page.com
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { LoginComponent } from './views/login/login.component';
 import { EspejoPipe } from './share/pipes/espejo.pipe';
+import { FrontComponent } from './views/front/front.component';
+import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EspejoPipe } from './share/pipes/espejo.pipe';
     NotFoundPageComponent,
     AboutUsComponent,
     LoginComponent,
-    EspejoPipe
+    EspejoPipe,
+    FrontComponent,
+    DetallesEntradaComponent
   ],
   imports: [
     BrowserModule,
