@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.usuario).subscribe((data: number) => {
       localStorage.setItem('nombreUsuario', this.usuario.nombre);
       this.tokenService.setToken(data)
-      this.router.navigate(['/listado']);
+      this.router.navigate(['/dashboard']);
     });
   }
 }
