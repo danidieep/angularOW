@@ -1,0 +1,8 @@
+<p>menu works!</p>
+<ul id="menu">
+  <li><span> </span></li>
+  <li><span routerLink='/listado'>Blog</span></li>
+  <li><span routerLink='/aboutus'>About us</span></li>
+  <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Acceso</span></li>
+  <li id="acceso" *ngIf="miToken != 0" class="acceso" (click)="logout()"><span><strong>Usuario:</strong> {{ nombreUsuario }}</span></li>
+</ul>
