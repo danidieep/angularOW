@@ -16,11 +16,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es6",
-    "module": "es6",
+    "target": "es2020",
+    "module": "es2020",
     "useDefineForClassFields": false,
     "lib": [
-      "es6",
+      "es2020",
       "dom"
     ]
   },

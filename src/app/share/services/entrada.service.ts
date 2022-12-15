@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Entrada } from '../interfaces/interfaces';
@@ -41,5 +41,13 @@ export class EntradaService {
         }
       )
     );
+  }
+
+  public editarEntrada(entrada: Entrada): Observable<any> {
+    const headers: HttpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.httpClient.post<any>('https://jsonplaceholder.typicode.com/posts', entrada, { headers });
   }
 }

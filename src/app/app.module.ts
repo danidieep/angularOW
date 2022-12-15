@@ -14,7 +14,7 @@ import { LoginComponent } from './views/login/login.component';
 import { EspejoPipe } from './share/pipes/espejo.pipe';
 import { FrontComponent } from './views/front/front.component';
 import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
+// import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,6 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     EspejoPipe,
     FrontComponent,
     DetallesEntradaComponent,
-    DashboardComponent
   ],
   imports: [
     BrowserModule,
