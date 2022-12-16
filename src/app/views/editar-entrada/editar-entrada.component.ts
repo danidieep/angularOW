@@ -31,7 +31,7 @@ export class EditarEntradaComponent implements OnInit {
     };
     this.formEntrada = this.fb.group({
       title: ['', Validators.required],
-      body: ['', Validators.required, Validators.minLength(10)],
+      body: ['', [Validators.required, Validators.minLength(10)]],
       fecha: ['', Validators.required],
       autor: ['', Validators.required],
     });
@@ -40,7 +40,10 @@ export class EditarEntradaComponent implements OnInit {
       this.id = +paramsUrl.id;
     });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.recuperarEntrada()
+  }
 
   private recuperarEntrada(): void {
     this.entradaService.recuperarEntrada(this.id).subscribe((data: Entrada) => {

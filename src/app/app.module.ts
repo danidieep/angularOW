@@ -14,6 +14,7 @@ import { LoginComponent } from './views/login/login.component';
 import { EspejoPipe } from './share/pipes/espejo.pipe';
 import { FrontComponent } from './views/front/front.component';
 import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entr
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
